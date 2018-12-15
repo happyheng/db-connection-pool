@@ -110,7 +110,7 @@ public class DbConnectionPool {
         synchronized (executeRunnableWaitObject) {
             logger.info("executeSql notifyAll before");
 
-            executeRunnableWaitObject.notifyAll();
+            executeRunnableWaitObject.notify();
 
             logger.info("executeSql notifyAll end");
         }
